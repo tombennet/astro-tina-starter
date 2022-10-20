@@ -1,0 +1,8 @@
+---
+import VueCounter from './VueCounter.vue';
+const { ...props } = Astro.props;
+---
+
+<VueCounter client:visible 
+  variableExample={props.variableExample}
+/>

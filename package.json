@@ -1,0 +1,23 @@
+{
+  "name": "astro-tina-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "tina": "tinacms dev -c \"astro dev\""
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.11.4",
+    "@astrojs/rss": "^1.0.2",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/vue": "^1.2.0",
+    "@tinacms/cli": "^0.61.24",
+    "astro": "^1.5.1",
+    "tinacms": "^0.69.18",
+    "vue": "^3.2.41"
+  }
+}

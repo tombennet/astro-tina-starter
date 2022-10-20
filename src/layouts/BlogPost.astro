@@ -1,0 +1,54 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import type { MDXLayoutProps } from 'astro';
+
+type Props = MDXLayoutProps<{
+  title: string;
+	description: string;
+  pubDate?: string;
+	updatedDate?: string;
+	heroImage?: string;
+}>;
+
+const {	frontmatter } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={frontmatter.title} description={frontmatter.title} />
+		<style>
+			.title {
+				font-size: 2em;
+				margin: 0.25em 0 0;
+			}
+			hr {
+  				border-top: 1px solid #DDD;
+				margin: 1rem 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				{frontmatter.heroImage && (
+					<img
+						width={720}
+						height={360}
+						src={frontmatter.heroImage}
+						alt=""
+					/>
+				)}
+				<h1 class="title">{frontmatter.title}</h1>
+				{frontmatter.pubDate && <time>{frontmatter.pubDate.substring(0,10)}</time>}
+				{frontmatter.updatedDate && <div>Last updated on <time>{frontmatter.updatedDate.substring(0,10)}</time></div>}
+				<hr/>
+				<slot />
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

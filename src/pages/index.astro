@@ -1,0 +1,51 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<p>
+				Welcome to your <a href="https://astro.build/">Astro</a> blog starter template, modified
+				to support <a href="https://tina.io/">Tina CMS</a>. This template serves as a lightweight,
+				minimally-styled starting point for anyone looking to build a personal website or blog with Astro.
+			</p>
+			<p>
+				This template comes with a few integrations already configured in your
+				<code>astro.config.mjs</code> file. You can customize your setup with
+				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
+				React, or Vue to your project.
+			</p>
+			<p>Here are a few ideas on how to get started with the template:</p>
+			<ul>
+				<li>Spin up your CMS with <code>npm run tina</code> then head to <a href="/admin/index.html">/admin/index.html</a></li>
+				<li>Edit this page in <code>src/pages/index.astro</code></li>
+				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
+				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
+				<li>Check out the included blog posts in <code>src/content/</code></li>
+				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+			</ul>
+			<p>
+				If you get stuck, remember to <a href="https://docs.astro.build/"
+					>read the Astro docs
+				</a> or <a href="https://astro.build/chat">join them on Discord</a> to ask questions.
+				For help with the CMS, check out <a href="https://tina.io/docs/">the Tina documentation</a>
+				or join their <a href="https://discord.com/invite/zumN63Ybpf">Discord server</a>.
+			</p>
+			<p>Have fun! I'm <a href="https://www.bennet.org/">Tom Bennet</a> - if you would like to suggest
+				improvements to this template, please consider <a href="https://github.com/tombennet/astro-tina-starter">
+			  submitting a PR</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
