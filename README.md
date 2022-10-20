@@ -46,7 +46,7 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 This template includes one example of an [MDX custom component](https://docs.astro.build/en/guides/integrations-guide/mdx/#custom-components): a simple counter built with Vue 3. This demonstrates how you can add rich interactive components to your markdown content - including components with input parameters - *and* edit them via the CMS!
 
-![blog](/tomcbennet/astro-tina-starter/raw/main/public/mdx-component.png)
+![blog](/public/mdx-component.png)
 
 Creating new components for use in Tina is easy. First define your component using React, Vue, or any of the [UI frameworks](https://docs.astro.build/en/guides/integrations-guide/) supported by Astro, then `import` it and add it to the `components` prop in the blog post template (`[slug].astro`). Next add it to your Tina schema in `.tina/config.ts` [as a template](https://tina.io/docs/editing/markdown/#defining-a-template-in-a-collection) in your `body` field.
 
