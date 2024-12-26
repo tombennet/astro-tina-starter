@@ -32,7 +32,7 @@ export default defineStaticConfig({
             label: "Title",
             isTitle: true,
             required: true,
-          },
+          },{
             type: "string",
             name: "description",
             label: "Description",
